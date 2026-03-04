@@ -1,6 +1,6 @@
 cask "lector" do
-  version "v0.1.9.1"
-  sha256 "57ad2aebf06b77e36cad2a7ae763261e6f0d2ca3dedbd5f0d55454569167f854"
+  version "v0.1.9.2"
+  sha256 "5a578e8170e304d21e094c4ff665016d415f47895495d4e3598166774821854a"
 
   url "https://github.com/herbertwxin/Lector/releases/download/#{version}/Lector.dmg"
 

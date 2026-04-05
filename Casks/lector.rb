@@ -10,5 +10,13 @@ cask "lector" do
 
   app "Lector.app"
 
+  # macOS 26 enforces Apple Event restrictions for quarantined apps, which
+  # blocks Finder file-open events from reaching the running app.  Remove
+  # quarantine so double-clicking PDFs works correctly.
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Lector.app"]
+  end
+
   zap trash: "~/Library/Application Support/Lector"
 end
